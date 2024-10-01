@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #logintext {
+            font-family: quicksand;
+            font-size: 2.5em;
+            text-align: center;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="container" data-tilt data-tilt-reverse="true">
+        <div class="image-section">
+            <img src="gmbrlogin.png" alt="">
+        </div>
+        <div class="form-section">
+            <h1 id="logintext">Login</h1>
+            <form action="proses_login.php" method="post">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <a style="color: white;" href="#">Lupa password?</a>
+            <button type="submit" name="submit">Login</button>
+            <p>Belum punya akun? <a>Registrasi</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+      let bob = document.getElementsByClassName('cursor')[0];
+
+      let mouseX = 0;
+      let mouseY = 0;
+
+      let ballX = 0;
+      let ballY = 0;
+
+      let speed = 0.2;  //how fast ball catches up to mouse pointer;
+
+      function animate() {
+        let distX = mouseX - ballX;
+        let distY = mouseY - ballY;
+              
+        ballX = ballX + (distX * speed);
+        ballY = ballY + (distY * speed);
+        
+        bob.style.left = ballX + 'px';
+        bob.style.top = ballY + 'px';
+
+        requestAnimationFrame(animate)
+
+      };
+
+      animate();
+     
+      document.addEventListener('mousemove',function(e){
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+      });
+
+      
+    </script>
+    <script src="vanilla-tilt.min.js"></script>
+</body>
+</html>
+
