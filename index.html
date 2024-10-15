@@ -5,35 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <style>
         #logintext {
             font-family: quicksand;
             font-size: 2.5em;
             text-align: center;
-        }
+        } 
     </style>
     
     
 </head>
 <body>
+<div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+<form action="ceklogin.php" method="post">
+<div class="d-flex flex-column justify-content-center w-100 h-100"></div>
+
+	
+
     <div class="cursor"></div>
     <div class="container" data-tilt data-tilt-reverse="true">
         <div class="image-section">
-            <img src="gmbrlogin.png" alt="">
+            <img src="asset/gambar/gmbrlogin.png" alt="">
         </div>
         <div class="form-section">
-            <h1 id="logintext">Login</h1>
-            <form action="proses_login.php" method="post">
+            <h1 id="logintext" style="font-family: quicksand; font-size: 2.5em; text-align: center;">Login</h1>
             <input type="email" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="passwordd" placeholder="Password">
             <a style="color: white;" href="#">Lupa password?</a>
-            <button>Login</button>
-            <p>Belum punya akun? <a>Registrasi</a></p>
-            </form>
+            <button type="submit" name="submit">Login</button>
+            <p>Belum punya akun? <a href="reg.php">Registrasi</a></p>
         </div>
     </div>
-
+    </form>
 
     <script>
       let bob = document.getElementsByClassName('cursor')[0];
@@ -44,7 +48,7 @@
       let ballX = 0;
       let ballY = 0;
 
-      let speed = 0.2;  //how fast ball catches up to mouse pointer;
+      let speed = 0.09;  //how fast ball catches up to mouse pointer;
 
       function animate() {
         let distX = mouseX - ballX;
@@ -72,4 +76,5 @@
     <script src="vanilla-tilt.min.js"></script>
 </body>
 </html>
+
 
