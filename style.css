@@ -9,9 +9,24 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, #43514f, #2d4052);
     cursor: none;
     transition: 0.3s;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    width: 100%;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 body.dark-mode {
@@ -19,10 +34,9 @@ body.dark-mode {
 }
 .container {
     display: flex;
-    width: 80%;
     width: 60em;    
-    height: 60%;
-    background-color: #9CC7C6;
+    height: 33em;
+    background-color: #9cc7c600;
     border-radius: 15px;
     overflow: hidden;
     transition: 0.3s;
@@ -34,8 +48,8 @@ body.dark-mode {
 .container:hover{
     transform: translatey(-2px);
     transition: 0.3s;
-    
 }
+
 
 .form-section {
     flex: 1;
@@ -44,8 +58,12 @@ body.dark-mode {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, #80CBC4, #64B5F6);
-    box-shadow: -3px 0 10px #4f4f4f;}
+    background-color: #ffffff00;
+    box-shadow: 0px 0 20px #4f4f4f;
+    backdrop-filter: blur(10px);
+  
+}
+
 .form-section h1 {
     font-size: 36px;
     margin-bottom: 20px;
